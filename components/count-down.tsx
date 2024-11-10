@@ -1,13 +1,13 @@
 "use client";
-
+ 
 import { useState, useRef, useEffect, ChangeEvent } from "react";
 
 export default function Countdown() {
-    const [duration, setDuration] = useState<number | string>(""); // Timer duration input
-    const [timeLeft, setTimeLeft] = useState<number>(0); // Remaining time
-    const [isActive, setIsActive] = useState<boolean>(false); // Timer active or not
-    const [isPaused, setIsPaused] = useState<boolean>(false); // Timer paused or not
-    const timerRef = useRef<NodeJS.Timeout | null>(null); // Timer reference for clearing
+    const [duration, setDuration] = useState<number | string>("");
+    const [timeLeft, setTimeLeft] = useState<number>(0);
+    const [isActive, setIsActive] = useState<boolean>(false);
+    const [isPaused, setIsPaused] = useState<boolean>(false);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
 
     const handleSetDuration = (): void => {
         const parsedDuration = Number(duration);
